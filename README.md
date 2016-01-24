@@ -85,6 +85,11 @@ Read at undersigned url for various optimization settings:
 
     source https://www.unbound.net/documentation/howto_optimise.html
 
+## Todo
+
+- Add DNSCrypt wrapper
+- Fix num-thread bug. Currently only 1 thread supported,else it crash
+
 
 ## Credits & Resources
 
