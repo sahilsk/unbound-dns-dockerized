@@ -1,12 +1,22 @@
-Unbound :  sahilsk/unbound
+Unbound
 ---------
+
+##About
+
+Unbound: a validating, recursive, and caching DNS resolver that supports DNSSEC
+This docker aim to simplify setup for unbound for following use cases:
+
+- caching
+- dnsspoof
+- anti-advertisement
+
 
 ## How-to
 
-Build docker  image
 
-    docker build -t sahilsk/unbound .
+Pull image
 
+    docker pull sahilsk/unbound
 
 Run it:
 
@@ -54,7 +64,7 @@ You can independently verify the root zone anchor by going to the IANA.org Index
 
 Store it as`/var/unbound/etc/root.key`
 
-## Dnsspoof with yoyo.org, anti-advertising list
+## Dnsspoof with yoyo.org/benstasker.co.uk, anti-advertising list
 
 Yoyo.org supplies a list of known advertising servers in a convenient text file which is updated periodically and pre-formated for unbound. The list will configure Unbound to redirect the ad server hostnames to localhost (127.0.0.1).
 
@@ -71,11 +81,12 @@ followed by unbount reload, if unbound running as server
 
 ## Optimization
 
-source https://www.unbound.net/documentation/howto_optimise.html
+Read at undersigned url for various optimization settings:
+
+    source https://www.unbound.net/documentation/howto_optimise.html
 
 
-
-## Credits
+## Credits & Resources
 
 - https://calomel.org/unbound_dns.html
 
